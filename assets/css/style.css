@@ -1155,3 +1155,11 @@ input[type=email]::placeholder {
         max-width: 100%;
     }
 }
+
+body.its_safari {
+    line-height: 1.5;
+}
+
+body.its_safari header .bf_menu_drawer ul li a {
+    margin-top: 1rem;
+}
