@@ -347,11 +347,9 @@ $(document).ready(function () {
         return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
     };
 
-    var isSafari = window.safari !== undefined;
-    if (isSafari) {
-        console.log("Safari, yeah!");
-    }else {
-        console.log("Safari, Noooo!");
+    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+    {
+        alert("Browser is Safari");
     }
 
 })
