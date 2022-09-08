@@ -1150,7 +1150,6 @@ input[type=email]::placeholder {
 
 }
 
-
 @media (max-width: 350px) {
     .bf_hero_text {
         max-width: 100%;
