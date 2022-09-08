@@ -1171,3 +1171,9 @@ body.its_safari header .bf_menu_drawer ul li a {
 body.its_safari header nav .bf_main_navigation li + li {
     margin-left: 3rem;
 }
+
+@media (min-width: 993px) {
+    body.its_safari footer .bf_footer_top_right {
+        margin-left: 6rem;
+    }
+}
