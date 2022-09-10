@@ -1,18 +1,10 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {*/
     .bf_next_btn:not(.date-next) {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
     }
-}
+/*}*/
 
 /*  <---- Hero Section ---->  */
 
