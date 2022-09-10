@@ -1,10 +1,9 @@
-/*@media (min-width: 768px) {*/
-    .bf_next_btn:not(.date-next) {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-/*}*/
+
+.bf_next_btn:not(.date-next) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
 
 /*  <---- Hero Section ---->  */
 
