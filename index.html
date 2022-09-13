@@ -14,13 +14,11 @@
     <script>
         function fun(n, ev) {
             n = n.replace(/[^\d]/g, "");
+            // n = n.replace(/[A-Za-z]/g, "");
             if (n.length > 3) {
                 n = insert(n, 3, '-');
-                if (n.length > 7) {
-                    n = insert(n, 7, '-');
-                    if (n.length > 13) {
-                        n = insert(n, 13, '-');
-                    }
+                if (n.length > 6) {
+                    n = insert(n, 6, '-');
                 }
             }
             ev.target.value = n;
@@ -129,7 +127,7 @@
 <!---- Hero Section ---->
 <section class="bf_hero_sec">
     <div class="bf_hero_steps">
-        <div class="bf_hero_sec_inner bf_container">
+        <div class="bf_hero_sec_inner bf_hidden bf_container">
             <div class="bf_hero_text">
                 <h2 class="bf_main_heading bf_hero_heading">A Fast and Easy Way to Find a Loan.</h2>
                 <h4 class="bf_sub_heading">From $100 to $40,000</h4>
@@ -140,7 +138,7 @@
                 <img src="images/hero-img.png" alt="">
             </div>
         </div>
-        <div class="bf_steps_inner">
+        <div class="bf_steps_inner active">
             <div class="bf_progress_bar bf_container">
                 <div class="bf_progress">
                     <div class="bf_bar"></div>
@@ -152,12 +150,12 @@
                         <div class="bf_full_width">
                             <h3 class="bf_main_heading">How much would you like to borrow?</h3>
                             <p class="bf_main_para">Pick a common amount:</p>
-<!--                            <p class="bf_main_para">Enter an amount between $2,000 - $50,000</p>-->
+                            <!--                            <p class="bf_main_para">Enter an amount between $2,000 - $50,000</p>-->
                         </div>
-<!--                        <input type="text" min="0" placeholder="Enter Loan Amount Here"-->
-<!--                               class="bf_form_control bf_loan_amount required-filed bf_first_child">-->
+                        <!--                        <input type="text" min="0" placeholder="Enter Loan Amount Here"-->
+                        <!--                               class="bf_form_control bf_loan_amount required-filed bf_first_child">-->
                         <div class="bf_full_width">
-<!--                            <p class="bf_main_para">Pick a common amount:</p>-->
+                            <!--                            <p class="bf_main_para">Pick a common amount:</p>-->
                             <div class="bf_steps_buttons">
                                 <button class="bf_step_btn">$5,000</button>
                                 <button class="bf_step_btn">$7,500</button>
@@ -487,36 +485,36 @@
                         <p class="bf_main_para bf_main_para_small bf_disclosure">Advertiser Disclosure</p>
                     </div>
                 </div>
-                <div class="bf_step bf_hidden">
-                    <div class="bf_step_inner">
-                        <div class="bf_full_width">
-                            <h3 class="bf_main_heading">What is your Zip code?</h3>
-                        </div>
-                        <input type="number" min="1"
-                               onKeyPress="if(this.value.length==6) return false;" placeholder="Enter zip code here"
-                               class="bf_form_control required-filed bf_first_child">
-                        <button class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
-                        <button class="bf_prev_btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
-                                 viewBox="0 0 29.25 29.25">
-                                <path id="prev-icon"
-                                      d="M29.25,14.625A14.625,14.625,0,1,0,14.625,29.25,14.625,14.625,0,0,0,29.25,14.625Zm-7.875,2.25H7.875l6.75-6.75Z"
-                                      transform="translate(0 29.25) rotate(-90)" fill="#517664"/>
-                            </svg>
-                            Back
-                        </button>
-                        <p class="bf_main_para bf_main_para_small bf_para_green">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20.3" height="23.2" viewBox="0 0 20.3 23.2">
-                                <path id="Icon_awesome-lock" data-name="Icon awesome-lock"
-                                      d="M18.125,10.15H17.038V6.888a6.888,6.888,0,1,0-13.775,0V10.15H2.175A2.176,2.176,0,0,0,0,12.325v8.7A2.176,2.176,0,0,0,2.175,23.2h15.95A2.176,2.176,0,0,0,20.3,21.025v-8.7A2.176,2.176,0,0,0,18.125,10.15Zm-4.713,0H6.888V6.888a3.263,3.263,0,0,1,6.525,0Z"
-                                      fill="#80ab82"/>
-                            </svg>
-                            We use 256 bit SSL technology to encrypt your
-                            data.
-                        </p>
-                        <p class="bf_main_para bf_main_para_small bf_disclosure">Advertiser Disclosure</p>
-                    </div>
-                </div>
+                <!--                <div class="bf_step bf_hidden">-->
+                <!--                    <div class="bf_step_inner">-->
+                <!--                        <div class="bf_full_width">-->
+                <!--                            <h3 class="bf_main_heading">What is your Zip code?</h3>-->
+                <!--                        </div>-->
+                <!--                        <input type="number" min="1"-->
+                <!--                               onKeyPress="if(this.value.length==6) return false;" placeholder="Enter zip code here"-->
+                <!--                               class="bf_form_control required-filed bf_first_child">-->
+                <!--                        <button class="bf_main_btn bf_next_btn date-next" disabled>Next</button>-->
+                <!--                        <button class="bf_prev_btn">-->
+                <!--                            <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"-->
+                <!--                                 viewBox="0 0 29.25 29.25">-->
+                <!--                                <path id="prev-icon"-->
+                <!--                                      d="M29.25,14.625A14.625,14.625,0,1,0,14.625,29.25,14.625,14.625,0,0,0,29.25,14.625Zm-7.875,2.25H7.875l6.75-6.75Z"-->
+                <!--                                      transform="translate(0 29.25) rotate(-90)" fill="#517664"/>-->
+                <!--                            </svg>-->
+                <!--                            Back-->
+                <!--                        </button>-->
+                <!--                        <p class="bf_main_para bf_main_para_small bf_para_green">-->
+                <!--                            <svg xmlns="http://www.w3.org/2000/svg" width="20.3" height="23.2" viewBox="0 0 20.3 23.2">-->
+                <!--                                <path id="Icon_awesome-lock" data-name="Icon awesome-lock"-->
+                <!--                                      d="M18.125,10.15H17.038V6.888a6.888,6.888,0,1,0-13.775,0V10.15H2.175A2.176,2.176,0,0,0,0,12.325v8.7A2.176,2.176,0,0,0,2.175,23.2h15.95A2.176,2.176,0,0,0,20.3,21.025v-8.7A2.176,2.176,0,0,0,18.125,10.15Zm-4.713,0H6.888V6.888a3.263,3.263,0,0,1,6.525,0Z"-->
+                <!--                                      fill="#80ab82"/>-->
+                <!--                            </svg>-->
+                <!--                            We use 256 bit SSL technology to encrypt your-->
+                <!--                            data.-->
+                <!--                        </p>-->
+                <!--                        <p class="bf_main_para bf_main_para_small bf_disclosure">Advertiser Disclosure</p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
                 <div class="bf_step bf_hidden">
                     <div class="bf_step_inner">
                         <div class="bf_full_width">
@@ -873,7 +871,7 @@
                         <p class="bf_main_para bf_main_para_small bf_disclosure">Advertiser Disclosure</p>
                     </div>
                 </div>
-                <div class="bf_step bf_hidden">
+                <div class="bf_step">
                     <div class="bf_step_inner">
                         <div class="bf_full_width">
                             <h3 class="bf_main_heading">What is your Social Security Number?</h3>
@@ -889,7 +887,7 @@
                             </p>
                         </div>
                         <div class="bf_full_width">
-                            <input type="text" onkeypress='fun(this.value, event)' min="9" required
+                            <input type="text" onkeyup='fun(this.value, event)' min="11" maxlength="11" required
                                    placeholder="XXX-XX-XXXX"
                                    class="bf_form_control required-filed bf_first_child bf_phone_number">
                         </div>

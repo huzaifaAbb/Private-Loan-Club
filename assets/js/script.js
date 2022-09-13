@@ -98,108 +98,108 @@ $(document).ready(function () {
         nextStep(step);
     });
     $('.required-filed').on('input propertychange change paste keyup', function (e) {
-        let step = $(this).parents('.bf_step');
-        let validation = false;
-        let fields = step.find('.required-filed');
-        let buttons = step.find('.bf_step_btn');
-        buttons.removeClass('active');
-        var length;
-        $(fields).each(function () {
-            length = parseInt($(this).attr('min'));
-            if ($(this).hasClass('bf_phone_number')) {
-                length = 11;
-            }
-            else if ($(this).hasClass('bf_email')) {
-                const $result = $('#result');
-                const mail = $(this);
-                const email = $(this).val();
-                $result.text('');
-                if (validateEmail(email)) {
-                    // $result.text(email + ' is valid');
-                    mail.css('color', '#517664');
-                    validation = true;
-                } else {
-                    // $result.text(email + ' is not valid');
-                    mail.css('color', 'red');
-                    validation = false;
-                }
-                return false;
-            }
-            else if ($(this).hasClass('bf_mobile_number')) {
-                var output, $this = $(this), input = $this.val();
-                if (e.keyCode !== 8) {
-                    input = input.replace(/[^0-9]/g, '');
-                    var area = input.substr(0, 3);
-                    var pre = input.substr(3, 3);
-                    var tel = input.substr(6, 4);
-                    if (area.length < 3) {
-                        output = "(" + area;
-                    } else if (area.length === 3 && pre.length < 3) {
-                        output = "(" + area + ")" + " " + pre;
-                    } else if (area.length === 3 && pre.length === 3) {
-                        output = "(" + area + ")" + " " + pre + "-" + tel;
-                    }
-                    $this.val(output);
-                } else {
-                    var str = input;
-                    if (input.slice(-1) === '-') {
-                        str = str.substring(0, str.length - 1);
-                        $this.val(str);
-                    } else if (/\s+$/.test($this.val()) && str.length === 6) {
-                        $this.val(input.substr(0, 4))
-                    } else if (str.length === 1) {
-                        $this.val('');
-                    }
-                }
-            }
-            else if ($(this).hasClass('bf_loan_amount')) {
-                var output, $this = $(this), input = $this.val();
-                if (e.keyCode !== 8) {
-                    input = input.replace(/[^0-9]/g, '');
-                    var area = input.substr(0, 3);
-                    var pre = input.substr(0, 1);
-                    var post = input.substr(1, input.length);
-                    output = "$" + input;
-                    if (input.length > 2 && input.length < 6) {
-                        output = "$" + pre + "," + post;
-                    } else if (input.length >= 6) {
-                        pre = input.substr(0, 2);
-                        post = input.substr(2, input.length);
-                        var ddpost = parseInt(post);
-                        ddpost = ddpost.toLocaleString();
-                        output = "$" + pre + "," + ddpost;
-                    }
-                    $this.val(output);
-                } else {
-                    var str = input;
-                    if (input.slice(-1) === ',') {
-                        str = str.substring(0, str.length - 1);
-                        $this.val(str);
-                    } else if (str.length === 1) {
-                        $this.val('');
-                    }
-                }
-            }
-            if ($(this).val().trim() !== '' && $(this).val().trim().length >= length)
-            {
-                validation = true;
-            } else {
-                validation = false;
-                return false
-            }
-        })
-        if (validation) {
-            step.find('.bf_next_btn').removeAttr('disabled');
-        } else {
-            step.find('.bf_next_btn').attr('disabled', '');
-        }
-        if (e.which === 13 || e.which === 1) {
-            if (validation) {
-                increaseBarWidth();
-                nextStep(step);
-                st();
-            }
-        }
+        // let step = $(this).parents('.bf_step');
+        // let validation = false;
+        // let fields = step.find('.required-filed');
+        // let buttons = step.find('.bf_step_btn');
+        // buttons.removeClass('active');
+        // var length;
+        // $(fields).each(function () {
+        //     length = parseInt($(this).attr('min'));
+        //     if ($(this).hasClass('bf_phone_number')) {
+        //         length = 11;
+        //     }
+        //     else if ($(this).hasClass('bf_email')) {
+        //         const $result = $('#result');
+        //         const mail = $(this);
+        //         const email = $(this).val();
+        //         $result.text('');
+        //         if (validateEmail(email)) {
+        //             // $result.text(email + ' is valid');
+        //             mail.css('color', '#517664');
+        //             validation = true;
+        //         } else {
+        //             // $result.text(email + ' is not valid');
+        //             mail.css('color', 'red');
+        //             validation = false;
+        //         }
+        //         return false;
+        //     }
+        //     else if ($(this).hasClass('bf_mobile_number')) {
+        //         var output, $this = $(this), input = $this.val();
+        //         if (e.keyCode !== 8) {
+        //             input = input.replace(/[^0-9]/g, '');
+        //             var area = input.substr(0, 3);
+        //             var pre = input.substr(3, 3);
+        //             var tel = input.substr(6, 4);
+        //             if (area.length < 3) {
+        //                 output = "(" + area;
+        //             } else if (area.length === 3 && pre.length < 3) {
+        //                 output = "(" + area + ")" + " " + pre;
+        //             } else if (area.length === 3 && pre.length === 3) {
+        //                 output = "(" + area + ")" + " " + pre + "-" + tel;
+        //             }
+        //             $this.val(output);
+        //         } else {
+        //             var str = input;
+        //             if (input.slice(-1) === '-') {
+        //                 str = str.substring(0, str.length - 1);
+        //                 $this.val(str);
+        //             } else if (/\s+$/.test($this.val()) && str.length === 6) {
+        //                 $this.val(input.substr(0, 4))
+        //             } else if (str.length === 1) {
+        //                 $this.val('');
+        //             }
+        //         }
+        //     }
+        //     else if ($(this).hasClass('bf_loan_amount')) {
+        //         var output, $this = $(this), input = $this.val();
+        //         if (e.keyCode !== 8) {
+        //             input = input.replace(/[^0-9]/g, '');
+        //             var area = input.substr(0, 3);
+        //             var pre = input.substr(0, 1);
+        //             var post = input.substr(1, input.length);
+        //             output = "$" + input;
+        //             if (input.length > 2 && input.length < 6) {
+        //                 output = "$" + pre + "," + post;
+        //             } else if (input.length >= 6) {
+        //                 pre = input.substr(0, 2);
+        //                 post = input.substr(2, input.length);
+        //                 var ddpost = parseInt(post);
+        //                 ddpost = ddpost.toLocaleString();
+        //                 output = "$" + pre + "," + ddpost;
+        //             }
+        //             $this.val(output);
+        //         } else {
+        //             var str = input;
+        //             if (input.slice(-1) === ',') {
+        //                 str = str.substring(0, str.length - 1);
+        //                 $this.val(str);
+        //             } else if (str.length === 1) {
+        //                 $this.val('');
+        //             }
+        //         }
+        //     }
+        //     if ($(this).val().trim() !== '' && $(this).val().trim().length >= length)
+        //     {
+        //         validation = true;
+        //     } else {
+        //         validation = false;
+        //         return false
+        //     }
+        // })
+        // if (validation) {
+        //     step.find('.bf_next_btn').removeAttr('disabled');
+        // } else {
+        //     step.find('.bf_next_btn').attr('disabled', '');
+        // }
+        // if (e.which === 13 || e.which === 1) {
+        //     if (validation) {
+        //         increaseBarWidth();
+        //         nextStep(step);
+        //         st();
+        //     }
+        // }
     });
     var customSelect = $(".bf_custom_select");
     customSelect.each(function () {
