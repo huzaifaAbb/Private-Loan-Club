@@ -726,6 +726,10 @@ input[type=email]::placeholder {
     display: none;
 }
 
+.bf_faq_item_body .bf_main_para {
+    line-height: 1.5;
+}
+
 /*  <---- FAQ'S Section ---->  */
 
 /*  <---- Loan Request Section ---->  */
