@@ -296,7 +296,7 @@ header .bf_close_nav {
     width: 100%;
     display: block;
     text-align: right;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem;
     color: var(--green);
 }
 
