@@ -165,6 +165,11 @@
     background-color: var(--white);
 }
 
+.bf_step.bf_step_thank_you {
+    min-height: 40rem;
+    display: flex;
+}
+
 .bf_opacity {
     opacity: 0;
 }
