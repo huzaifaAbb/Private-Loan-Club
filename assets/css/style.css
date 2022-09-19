@@ -405,7 +405,7 @@ input[type=email]::placeholder {
     width: 100%;
     z-index: 10;
     background-color: var(--white);
-    padding: 4rem 1.5rem 1rem;
+    padding: 3rem 1.5rem 1rem;
     text-align: center;
     border: 0.2rem solid var(--green-shadow);
     border-radius: 1rem;
@@ -729,10 +729,11 @@ input[type=email]::placeholder {
 .bf_faq_item_body {
     padding: 2rem 2rem;
     display: none;
+    min-height: fit-content;
 }
 
 .bf_faq_item_body .bf_main_para {
-    line-height: 2;
+    line-height: 1.6;
 }
 
 /*  <---- FAQ'S Section ---->  */
@@ -1173,6 +1174,15 @@ body.its_safari header .bf_menu_drawer ul li a {
 
 body.its_safari header nav .bf_main_navigation li + li {
     margin-left: 3rem;
+    line-height: initial;
+}
+
+body.its_safari .bf_item {
+    padding: 1.4rem 0 0.4rem;
+}
+
+body.its_safari .bf_selected_item {
+    z-index: 9;
 }
 
 @media (min-width: 993px) {
