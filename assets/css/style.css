@@ -1062,6 +1062,11 @@ input[type=email]::placeholder {
         border-bottom: .2rem solid var(--green-shadow);
     }
 
+    .bf_item:last-child {
+        padding: 1.4rem 0 0.5rem;
+        border-bottom: unset;
+    }
+
     .bf_all_items {
         padding: 2rem 0 1rem;
     }
@@ -1183,6 +1188,12 @@ body.its_safari header nav .bf_main_navigation li + li {
 
 body.its_safari .bf_item {
     padding: 1.4rem 0 0.4rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+}
+
+body.its_safari .bf_all_items {
+    z-index: 8;
 }
 
 body.its_safari .bf_selected_item {

@@ -224,7 +224,6 @@ $(document).ready(function () {
         var allItems = $("<div></div>", {
             class: "bf_all_items bf_all_items_hide"
         }).appendTo(thisCustomSelect);
-
         options.each(function () {
             var that = $(this), optionText = that.text();
             let step = $(this).parents('.bf_step');
