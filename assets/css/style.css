@@ -1168,6 +1168,10 @@ body.its_safari header .bf_menu_drawer ul li a {
     margin-top: 1rem;
 }
 
+body.its_safari header nav, body.its_safari header nav * {
+    line-height: initial;
+}
+
 body.its_safari header .bf_menu_drawer ul li a {
     margin-top: 1rem;
 }
