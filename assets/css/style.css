@@ -1188,8 +1188,8 @@ body.its_safari header nav .bf_main_navigation li + li {
 
 body.its_safari .bf_item {
     padding: 1.4rem 0 0.4rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
+    height: 5rem;
+    line-height: 2;
 }
 
 body.its_safari .bf_all_items {
