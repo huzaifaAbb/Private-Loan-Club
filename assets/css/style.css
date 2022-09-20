@@ -1200,6 +1200,12 @@ body.its_safari .bf_all_items {
     z-index: 8;
 }
 
+@media (min-width: 768px) {
+    body.its_safari .bf_faq_item_body .bf_main_para {
+        padding-top: 1rem;
+    }
+}
+
 body.its_safari .bf_selected_item {
     z-index: 9;
 }
