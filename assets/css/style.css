@@ -287,6 +287,10 @@ input[type=email]::placeholder {
     justify-content: center;
 }
 
+/*.bf_steps_button_radio {*/
+/*    display: none;*/
+/*}*/
+
 .bf_full_width {
     display: block;
     width: 100%;

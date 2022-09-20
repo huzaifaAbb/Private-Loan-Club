@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function (node, child) {
     var totalSteps = ($('.bf_step').length);
     var barWidth = (100 / (totalSteps - 1));
     var customWidth = 0, counter = 0;
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     function nextStep(step) {
         if (step.next().length !== 0) {
-            step.addClass('bf_hidden');
+            $('.bf_step').addClass('bf_hidden');
             step.next('.bf_step').removeClass('bf_hidden');
         } else {
             close();
@@ -48,7 +48,7 @@ $(document).ready(function () {
     }
 
     function prevStep(step) {
-        step.addClass('bf_hidden');
+        $('.bf_step').addClass('bf_hidden');
         step.prev('.bf_step').removeClass('bf_hidden');
     }
 
@@ -81,7 +81,7 @@ $(document).ready(function () {
         buttons.not($(this)).removeClass('active');
         let fields = step.find('.required-filed');
         fields.val('');
-        $(this).toggleClass('active');
+        $(this).addClass('active');
         $(buttons).each(function () {
             if ($(this).hasClass('active')) {
                 validation = true;
@@ -91,13 +91,15 @@ $(document).ready(function () {
             }
         });
         if (validation) {
+            $(this).parents('.bf_steps_buttons').find('.bf_steps_button_radio').prop("checked", false);
+            $(this).prev('.bf_steps_button_radio').prop("checked", true);
+            increaseBarWidth();
+            st();
+            nextStep(step);
             step.find('.bf_next_btn').removeAttr('disabled');
         } else {
             step.find('.bf_next_btn').attr('disabled', '');
         }
-        increaseBarWidth();
-        st();
-        nextStep(step);
     });
 
     $('.required-filed').on('input propertychange change paste keyup', function (e) {
@@ -120,11 +122,9 @@ $(document).ready(function () {
                 const email = $(this).val();
                 $result.text('');
                 if (validateEmail(email)) {
-                    // $result.text(email + ' is valid');
                     mail.css('color', '#517664');
                     validation = true;
                 } else {
-                    // $result.text(email + ' is not valid');
                     mail.css('color', 'red');
                     validation = false;
                 }
@@ -228,11 +228,12 @@ $(document).ready(function () {
             var that = $(this), optionText = that.text();
             let step = $(this).parents('.bf_step');
             let validation = false;
-
             var item = $("<div></div>", {
                 class: "bf_item", on: {
                     click: function () {
-                        var selectedOptionText = that.text();
+                        var selectedOptionText = that.text().trim();
+                        let selectName = $(this).parents('.bf_custom_select').find('select').attr('name');
+                        selectedOptions(selectName, selectedOptionText);
                         selectedItem.text(selectedOptionText).removeClass("bf_arrowanim");
                         allItems.addClass("bf_all_items_hide");
                         let custom_select_select = $('.bf_selected_item');
@@ -246,11 +247,11 @@ $(document).ready(function () {
                         });
                         if (validation) {
                             step.find('.bf_next_btn').removeAttr('disabled');
+                            increaseBarWidth();
+                            nextStep(step);
                         } else {
                             step.find('.bf_next_btn').attr('disabled', '');
                         }
-                        increaseBarWidth();
-                        nextStep(step);
                     }
                 }
             })
@@ -300,7 +301,7 @@ $(document).ready(function () {
         }, 600);
     });
 
-    $('.bf_next_btn').click(function (e) {
+    $('.bf_next_btn:not(.bf_view_offers)').click(function (e) {
         e.preventDefault();
         increaseBarWidth();
         st();
@@ -320,7 +321,7 @@ $(document).ready(function () {
         close();
     });
 
-    $('.bf_view_offers').click(function (e) {
+    $('.bf_steps_form').submit(function (e) {
         e.preventDefault();
         viewOffers();
     });
@@ -330,9 +331,11 @@ $(document).ready(function () {
         customWidth = 0;
         bar.width('0%');
         $('.bf_step_btn').removeClass('active');
+        $('.bf_steps_button_radio').prop("checked", false);
         $('.required-filed').val('');
         $('.bf_next_btn').attr('disabled', '');
         $('.bf_selected_item').text('Select');
+        // $('option').text('Select');
         let steps_inner = $('.bf_steps_inner');
         $('.bf_loading-overlay').addClass('active');
         $('.bf_hero_sec_inner').removeClass('bf_hidden');
@@ -347,6 +350,7 @@ $(document).ready(function () {
     }
 
     function viewOffers() {
+        // console.log($('.bf_steps_form').serialize());
         $('.bf_bar').width('0');
         $('.bf_loading-overlay').addClass('active');
         setTimeout(function () {
@@ -386,7 +390,7 @@ $(document).ready(function () {
     function thankYou() {
         $('.bf_bar').animate({width: '100%'}, {
             duration: 10000, step: function (now, fx) {
-                if (fx.prop == 'width') {
+                if (fx.prop === 'width') {
                     $('.bf_counting').html(parseInt(Math.round(now * 100) / 100) + '%');
                 }
             }
@@ -396,4 +400,36 @@ $(document).ready(function () {
         }, 11000);
     }
 
+    function stepButton() {
+        var setpsButton = $('.bf_step_btn:not(.bf_view_offers)');
+        setpsButton.each(function (index, ele) {
+            $(ele).attr('type', 'button');
+            let select = '<input type="radio" class="bf_steps_button_radio" name="' + $(ele).parents('.bf_steps_buttons').attr('data-name') + '" value="' + $(ele).text() + '">';
+            $(select).insertBefore($(ele));
+        });
+    }
+
+    stepButton();
+
+    function options() {
+        var options = $('option');
+        options.each(function (i, ele) {
+            $(ele).val($(ele).text().trim());
+        });
+    }
+
+    function selectedOptions(name, val) {
+        var options = $('select[name=' + name + ']').find('option');
+        options.each(function (i, ele) {
+            if ($(ele).text().trim() === val) {
+                $(ele).prop('selected', true);
+                $(ele).attr('selected', 'selected');
+            } else {
+                $(ele).prop('selected', false);
+                $(ele).removeAttr('selected');
+            }
+        });
+    }
+
+    options();
 })
