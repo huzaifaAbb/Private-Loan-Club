@@ -138,7 +138,7 @@
                 <img src="images/hero-img.png" alt="">
             </div>
         </div>
-        <div action="" method="post" novalidate class="bf_steps_inner bf_steps_form">
+        <form action="#" type="post" class="bf_steps_inner bf_steps_form">
             <div class="bf_progress_bar bf_container">
                 <div class="bf_progress">
                     <div class="bf_bar"></div>
@@ -157,18 +157,27 @@
                         <div class="bf_full_width">
                             <!--                            <p class="bf_main_para">Pick a common amount:</p>-->
                             <div class="bf_steps_buttons" data-name="common_amount">
-                                <button class="bf_step_btn">$5,000</button>
-                                <button class="bf_step_btn">$7,500</button>
-                                <button class="bf_step_btn">$10,000</button>
-                                <button class="bf_step_btn">$15,000</button>
-                                <button class="bf_step_btn">$20,000</button>
-                                <button class="bf_step_btn">$25,000</button>
-                                <button class="bf_step_btn">$30,000</button>
-                                <button class="bf_step_btn">$35,000</button>
-                                <button class="bf_step_btn">$50,000</button>
+                                <input type="radio" id="1" name="common_amount" value="$5,000">
+                                <label for="1" class="bf_step_btn">$5,000</label>
+                                <input type="radio" id="2" name="common_amount" value="$7,500">
+                                <label for="2" class="bf_step_btn">$7,500</label>
+                                <input type="radio" id="3" name="common_amount" value="$10,000">
+                                <label for="3" class="bf_step_btn">$10,000</label>
+                                <input type="radio" id="4" name="common_amount" value="$15,000">
+                                <label for="4" class="bf_step_btn">$15,000</label>
+                                <input type="radio" id="5" name="common_amount" value="$20,000">
+                                <label for="5" class="bf_step_btn">$20,000</label>
+                                <input type="radio" id="6" name="common_amount" value="$25,000">
+                                <label for="6" class="bf_step_btn">$25,000</label>
+                                <input type="radio" id="7" name="common_amount" value="$30,000">
+                                <label for="7" class="bf_step_btn">$30,000</label>
+                                <input type="radio" id="8" name="common_amount" value="$35,000">
+                                <label for="8" class="bf_step_btn">$35,000</label>
+                                <input type="radio" id="9" name="common_amount" value="$50,000">
+                                <label for="9" class="bf_step_btn">$50,000</label>
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
                         <p class="bf_main_para bf_main_para_small">I consent and agree to the Privacy Policy, Terms of
                             Service, Advertiser
                             Disclosure, E-Consent and Arbitration Notice by clicking "Next". I also understand that if I
@@ -192,25 +201,24 @@
                             <h3 class="bf_main_heading">How do you want to spend the money?</h3>
                         </div>
                         <div class="bf_custom_select">
-                            <select name="spend_money">
-                                <option value="2">Auto</option>
-                                <option value="3">Credit Card Consolidation</option>
-                                <option value="4">Debt Consolidation</option>
-                                <option value="5">Debt Settlement</option>
-                                <option value="6">Debt Settlement</option>
-                                <option value="7">Education</option>
-                                <option value="8">Home Improvement</option>
-                                <option value="9">Medical</option>
-                                <option value="10">Relocation</option>
-                                <option value="11">Renewable Energy</option>
-                                <option value="12">Small Business</option>
-                                <option value="13">Travel</option>
-                                <option value="14">Wedding</option>
-                                <option value="15">Weddings</option>
+                            <label for="spend_money" hidden></label>
+                            <select id="spend_money" name="spend_money">
+                                <option value="Auto">Auto</option>
+                                <option value="Credit Card Consolidation">Credit Card Consolidation</option>
+                                <option value="Debt Consolidation">Debt Consolidation</option>
+                                <option value="Debt Settlement">Debt Settlement</option>
+                                <option value="Education">Education</option>
+                                <option value="Home Improvement">Home Improvement</option>
+                                <option value="Medical">Medical</option>
+                                <option value="Relocation">Relocation</option>
+                                <option value="Renewable Energy">Renewable Energy</option>
+                                <option value="Small Business">Small Business</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Wedding">Wedding</option>
                             </select>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -238,15 +246,25 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_3_button" data-name="estimated_credit_score">
-                                <button class="bf_step_btn">Excellent (720+)</button>
-                                <button class="bf_step_btn">Good (660-719)</button>
-                                <button class="bf_step_btn">Fair (600-659)</button>
-                                <button class="bf_step_btn">Poor (Under 599)</button>
-                                <button class="bf_step_btn">No Credit Established</button>
+                                <label for="10" class="bf_step_btn">Excellent (720+)</label>
+                                <input type="radio" id="10" name="estimated_credit_score" value="Excellent (720+)">
+
+                                <label for="11" class="bf_step_btn">Good (660-719)</label>
+                                <input type="radio" id="11" name="estimated_credit_score" value="Good (660-719)">
+
+                                <label for="12" class="bf_step_btn">Fair (600-659)</label>
+                                <input type="radio" id="12" name="estimated_credit_score" value="Fair (600-659)">
+
+                                <label for="13" class="bf_step_btn">Poor (Under 599)</label>
+                                <input type="radio" id="13" name="estimated_credit_score" value="Poor (Under 599)">
+
+                                <label for="14" class="bf_step_btn">No Credit Established</label>
+                                <input type="radio" id="14" name="estimated_credit_score" value="No Credit Established">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -274,15 +292,26 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_4_button" data-name="employment_status">
-                                <button class="bf_step_btn">Employed</button>
-                                <button class="bf_step_btn">Self Employed</button>
-                                <button class="bf_step_btn">Social Security or Disability</button>
-                                <button class="bf_step_btn">Benefits</button>
-                                <button class="bf_step_btn">Unemployed</button>
+                                <label for="15" class="bf_step_btn">Employed</label>
+                                <input type="radio" id="15" name="employment_status" value="Employed">
+
+                                <label for="16" class="bf_step_btn">Self Employed</label>
+                                <input type="radio" id="16" name="employment_status" value="Self Employed">
+
+                                <label for="17" class="bf_step_btn">Social Security or Disability</label>
+                                <input type="radio" id="17" name="employment_status"
+                                       value="Social Security or Disability">
+
+                                <label for="18" class="bf_step_btn">Benefits</label>
+                                <input type="radio" id="18" name="employment_status" value="Benefits">
+
+                                <label for="19" class="bf_step_btn">Unemployed</label>
+                                <input type="radio" id="19" name="employment_status" value="Unemployed">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -310,14 +339,22 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_5_button" data-name="salary_paying">
-                                <button class="bf_step_btn">Monthly</button>
-                                <button class="bf_step_btn">Twice a Month</button>
-                                <button class="bf_step_btn">Every Other Week</button>
-                                <button class="bf_step_btn">Weekly</button>
+                                <label for="20" class="bf_step_btn">Monthly</label>
+                                <input type="radio" id="20" name="salary_paying" value="Monthly">
+
+                                <label for="21" class="bf_step_btn">Twice a Month</label>
+                                <input type="radio" id="21" name="salary_paying" value="Twice a Month">
+
+                                <label for="22" class="bf_step_btn">Every Other Week</label>
+                                <input type="radio" id="22" name="salary_paying" value="Every Other Week">
+
+                                <label for="23" class="bf_step_btn">Weekly</label>
+                                <input type="radio" id="23" name="salary_paying" value="Weekly">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -344,30 +381,31 @@
                             <h3 class="bf_main_heading">What is your monthly income?</h3>
                         </div>
                         <div class="bf_custom_select">
-                            <select name="monthly_income">
-                                <option>$500 - $1,000</option>
-                                <option>$1,000 - $2,000</option>
-                                <option>$2,000 - $3,000</option>
-                                <option>$3,000 - $4,000</option>
-                                <option>$4,000 - $5,000</option>
-                                <option>$5,000 - $6,000</option>
-                                <option>$6,000 - $7,000</option>
-                                <option>$7,000 - $8,000</option>
-                                <option>$8,000 - $9,000</option>
-                                <option>$9,000 - $10,000</option>
-                                <option>$10,000 - $11,000</option>
-                                <option>$11,000 - $12,000</option>
-                                <option>$12,000 - $13,000</option>
-                                <option>$13,000 - $14,000</option>
-                                <option>$14,000 - $15,000</option>
-                                <option>$16,000 - $17,000</option>
-                                <option>$17,000 - $18,000</option>
-                                <option>$18,000 - $19,000</option>
-                                <option>$19,000 - $20,000</option>
+                            <label for="monthly_income"></label>
+                            <select id="monthly_income" name="monthly_income">
+                                <option value="$500 - $1,000">$500 - $1,000</option>
+                                <option value="$1,000 - $2,000">$1,000 - $2,000</option>
+                                <option value="$2,000 - $3,000">$2,000 - $3,000</option>
+                                <option value="$3,000 - $4,000">$3,000 - $4,000</option>
+                                <option value="$4,000 - $5,000">$4,000 - $5,000</option>
+                                <option value="$5,000 - $6,000">$5,000 - $6,000</option>
+                                <option value="$6,000 - $7,000">$6,000 - $7,000</option>
+                                <option value="$7,000 - $8,000">$7,000 - $8,000</option>
+                                <option value="$8,000 - $9,000">$8,000 - $9,000</option>
+                                <option value="$9,000 - $10,000">$9,000 - $10,000</option>
+                                <option value="$10,000 - $11,000">$10,000 - $11,000</option>
+                                <option value="$11,000 - $12,000">$11,000 - $12,000</option>
+                                <option value="$12,000 - $13,000">$12,000 - $13,000</option>
+                                <option value="$13,000 - $14,000">$13,000 - $14,000</option>
+                                <option value="$14,000 - $15,000">$14,000 - $15,000</option>
+                                <option value="$16,000 - $17,000">$16,000 - $17,000</option>
+                                <option value="$17,000 - $18,000">$17,000 - $18,000</option>
+                                <option value="$18,000 - $19,000">$18,000 - $19,000</option>
+                                <option value="$19,000 - $20,000">$19,000 - $20,000</option>
                             </select>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -395,12 +433,16 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_5_button" data-name="checking_account">
-                                <button class="bf_step_btn">Yes</button>
-                                <button class="bf_step_btn">No</button>
+                                <label for="24" class="bf_step_btn">Yes</label>
+                                <input type="radio" id="24" name="checking_account" value="Yes">
+
+                                <label for="25" class="bf_step_btn">No</label>
+                                <input type="radio" id="25" name="checking_account" value="No">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -428,12 +470,16 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_5_button" data-name="direct_deposit">
-                                <button class="bf_step_btn">Yes</button>
-                                <button class="bf_step_btn">No</button>
+                                <label for="26" class="bf_step_btn">Yes</label>
+                                <input type="radio" id="26" name="direct_deposit" value="Yes">
+
+                                <label for="27" class="bf_step_btn">No</label>
+                                <input type="radio" id="27" name="direct_deposit" value="No">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -459,13 +505,15 @@
                         <div class="bf_full_width">
                             <h3 class="bf_main_heading">What is your street address?</h3>
                         </div>
-                        <input type="text" min="1" name="street_address" placeholder="Enter street address here"
+                        <label for="street_address" hidden></label>
+                        <input min="1" name="street_address" id="street_address"
+                               placeholder="Enter street address here"
                                class="bf_form_control required-filed bf_first_child">
                         <div class="bf_full_width">
                             <p class="bf_main_para">Sample City, Sample State Sample Zipcode</p>
                         </div>
-                        <button class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -493,12 +541,15 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_5_button" data-name="house_details">
-                                <button class="bf_step_btn">Own</button>
-                                <button class="bf_step_btn">Rent</button>
+                                <label for="28" class="bf_step_btn">Own</label>
+                                <input type="radio" id="28" name="house_details" value="Own">
+
+                                <label for="29" class="bf_step_btn">Rent</label>
+                                <input type="radio" id="29" name="house_details" value="Rent">
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -526,15 +577,25 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_6_button" data-name="address_details">
-                                <button class="bf_step_btn">5 years or more</button>
-                                <button class="bf_step_btn">3-4 years</button>
-                                <button class="bf_step_btn">1-2 years</button>
-                                <button class="bf_step_btn">4-11 months</button>
-                                <button class="bf_step_btn">3 months or less</button>
+                                <label for="30" class="bf_step_btn">5 years or more</label>
+                                <input type="radio" id="30" name="address_details" value="5 years or more">
+
+                                <label for="31" class="bf_step_btn">3-4 years</label>
+                                <input type="radio" id="31" name="address_details" value="3-4 years">
+
+                                <label for="32" class="bf_step_btn">1-2 years</label>
+                                <input type="radio" id="32" name="address_details" value="1-2 years">
+
+                                <label for="33" class="bf_step_btn">4-11 months</label>
+                                <input type="radio" id="33" name="address_details" value="4-11 months">
+
+                                <label for="34" class="bf_step_btn">3 months or less</label>
+                                <input type="radio" id="34" name="address_details" value="3 months or less">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -560,11 +621,13 @@
                         <div class="bf_full_width">
                             <h3 class="bf_main_heading">What is your email address?</h3>
                         </div>
+                        <label for="email" hidden></label>
                         <input type="email" id="email" name="email" min="1" placeholder="Enter email address here"
                                class="bf_form_control required-filed bf_email bf_first_child">
                         <!--                        <p id="result"></p>-->
-                        <button class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" type="button" class="bf_main_btn bf_next_btn date-next" disabled>Next
+                        </button>
+                        <button type="button" type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -592,13 +655,19 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_7_button" data-name="vehicle_details">
-                                <button class="bf_step_btn">Yes - It's paid off</button>
-                                <button class="bf_step_btn">Yes - I'm making payments</button>
-                                <button class="bf_step_btn">No</button>
+                                <label for="35" class="bf_step_btn">Yes - It's paid off</label>
+                                <input type="radio" id="35" name="vehicle_details" value="Yes - It's paid off">
+
+                                <label for="36" class="bf_step_btn">Yes - I'm making payments</label>
+                                <input type="radio" id="36" name="vehicle_details" value="Yes - I'm making payments">
+
+                                <label for="37" class="bf_step_btn">No</label>
+                                <input type="radio" id="37" name="vehicle_details" value="No">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -626,13 +695,21 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_7_button" data-name="military_affiliation">
-                                <button class="bf_step_btn">Not a Servicemember</button>
-                                <button class="bf_step_btn">Active Duty Servicemember</button>
-                                <button class="bf_step_btn">Dependent of an Active Duty Servicemember</button>
+                                <label for="38" class="bf_step_btn">Not a Servicemember</label>
+                                <input type="radio" id="38" name="military_affiliation" value="Not a Servicemember">
+
+                                <label for="39" class="bf_step_btn">Active Duty Servicemember</label>
+                                <input type="radio" id="39" name="military_affiliation"
+                                       value="Active Duty Servicemember">
+
+                                <label for="40" class="bf_step_btn">Dependent of an Active Duty Servicemember</label>
+                                <input type="radio" id="40" name="military_affiliation"
+                                       value="Dependent of an Active Duty Servicemember">
+
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -662,15 +739,24 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_8_button" data-name="unsecured_debt">
-                                <button class="bf_step_btn">None</button>
-                                <button class="bf_step_btn">$9,999 or less</button>
-                                <button class="bf_step_btn">$10,000 - $19,999</button>
-                                <button class="bf_step_btn">$20,000 - $29,999</button>
-                                <button class="bf_step_btn">$30,000 or more</button>
+                                <label for="41" class="bf_step_btn">None</label>
+                                <input type="radio" id="41" name="unsecured_debt" value="None">
+
+                                <label for="42" class="bf_step_btn">$9,999 or less</label>
+                                <input type="radio" id="42" name="unsecured_debt" value="$9,999 or less">
+
+                                <label for="43" class="bf_step_btn">$10,000 - $19,999</label>
+                                <input type="radio" id="43" name="unsecured_debt" value="$10,000 - $19,999">
+
+                                <label for="44" class="bf_step_btn">$20,000 - $29,999</label>
+                                <input type="radio" id="44" name="unsecured_debt" value="$20,000 - $29,999">
+
+                                <label for="45" class="bf_step_btn">$30,000 or more</label>
+                                <input type="radio" id="45" name="unsecured_debt" value="$30,000 or more">
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -698,14 +784,17 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_9_button bf_no_validate">
-                                <input min="1" name="f_name" type="text" placeholder="First Name"
+                                <label for="f_name" hidden></label>
+                                <input min="1" name="f_name" id="f_name" type="text" placeholder="First Name"
                                        class="bf_form_control required-filed">
-                                <input min="1" name="l_name" type="text" placeholder="Last Name"
+                                <label for="l_name" hidden></label>
+                                <input min="1" name="l_name" id="l_name" type="text"
+                                       placeholder="Last Name"
                                        class="bf_form_control required-filed">
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -733,14 +822,16 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_9_button">
-                                <input min="1" type="date" name="date_of_birth" placeholder="MM/DD/YYYY"
+                                <label for="date_of_birth" hidden></label>
+                                <input min="1" type="date" name="date_of_birth" id="date_of_birth"
+                                       placeholder="MM/DD/YYYY"
                                        class="bf_form_control bf_date_inp required-filed">
                             </div>
                         </div>
-                        <button class="bf_main_btn bf_next_btn date-next"
+                        <button type="button" class="bf_main_btn bf_next_btn date-next"
                                 disabled>Next
                         </button>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -768,7 +859,9 @@
                         </div>
                         <div class="bf_full_width">
                             <div class="bf_steps_buttons bf_step_9_button">
-                                <input min="14" type="tel" name="phone_number" placeholder="(XXX) XXX - XXXX"
+                                <label for="phone_number" hidden></label>
+                                <input min="14" type="tel" name="phone_number" id="phone_number"
+                                       placeholder="(XXX) XXX - XXXX"
                                        maxlength="14"
                                        class="bf_form_control required-filed bf_mobile_number bf_first_child">
                             </div>
@@ -776,7 +869,7 @@
                         <p class="bf_main_para bf_main_para_small">Providing your phone number is consent to receive
                             calls, texts, and recorded messages <br> from Search ROI, Cash By Phone, LLC, and its
                             network of <a href="#" class="bf_outer_link">Marketplace Partners.</a></p>
-                        <button class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
+                        <button type="button" class="bf_main_btn bf_next_btn date-next" disabled>Next</button>
                         <p class="bf_main_para bf_main_para_small">
                             By providing my phone number and clicking on the "Next" button above, I provide my express
                             consent to be contacted at the telephone number by Search ROI, LLC, Cash By Phone, LLC, and
@@ -790,7 +883,7 @@
                             Clicking "Next" shall be my electronic signature to this consent. Consent is not required to
                             utilize our services, and you may continue without providing a phone number by calling (800)
                             516-6577.</p>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -827,7 +920,9 @@
                             </p>
                         </div>
                         <div class="bf_full_width">
-                            <input type="text" name="security_number" onkeyup='fun(this.value, event)' min="11"
+                            <label for="security_number" hidden></label>
+                            <input type="text" name="security_number" id="security_number"
+                                   onkeyup='fun(this.value, event)' min="11"
                                    maxlength="11" required
                                    placeholder="XXX-XX-XXXX"
                                    class="bf_form_control required-filed bf_first_child bf_phone_number">
@@ -838,8 +933,8 @@
                             your consumer credit report from your credit profile or other information from contracted
                             Credit Bureau(s) associated with your pre-qualification for credit inquiry.
                         </p>
-                        <button type="submit" class="bf_main_btn bf_next_btn bf_view_offers date-next" disabled>View
-                            Offers
+                        <button type="submit" class="bf_main_btn bf_next_btn bf_view_offers date-next"
+                                disabled>View Offers
                         </button>
                         <div class="bf_steps_content">
                             <p class="bf_main_para bf_main_para_small">By providing my Social Security Number and
@@ -879,7 +974,7 @@
                             </ul>
                         </div>
                         <p class="bf_main_para bf_main_para_small"></p>
-                        <button class="bf_prev_btn">
+                        <button type="button" class="bf_prev_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25"
                                  viewBox="0 0 29.25 29.25">
                                 <path id="prev-icon"
@@ -916,7 +1011,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 <!---- Hero Section ---->

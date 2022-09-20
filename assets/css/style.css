@@ -5,6 +5,14 @@
     opacity: 0 !important;
 }
 
+[hidden] {
+    display: none !important;
+}
+
+.bf_steps_form input[type=radio] {
+    display: none !important;
+}
+
 /*  <---- Hero Section ---->  */
 
 .bf_hero_sec {
@@ -298,6 +306,8 @@ input[type=email]::placeholder {
 
 .bf_step_btn {
     height: 5.5rem;
+    line-height: 1.7;
+    cursor: pointer;
     font-size: 2.2rem;
     font-weight: 700;
     color: var(--green);
@@ -1085,6 +1095,7 @@ input[type=email]::placeholder {
 
     .bf_step_btn {
         min-height: 6.4rem;
+        line-height: 2;
         height: inherit;
     }
 

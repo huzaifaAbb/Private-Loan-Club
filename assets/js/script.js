@@ -34,13 +34,12 @@ $(document).ready(function () {
     function dereaseBarWidth() {
         counter--;
         customWidth = counter * barWidth;
-        console.log(customWidth)
         bar.width(customWidth + '%');
     }
 
     function nextStep(step) {
         if (step.next().length !== 0) {
-            step.addClass('bf_hidden');
+            $('.bf_step').not(step.next('.bf_step')).addClass('bf_hidden');
             step.next('.bf_step').removeClass('bf_hidden');
         } else {
             close();
@@ -48,7 +47,7 @@ $(document).ready(function () {
     }
 
     function prevStep(step) {
-        step.addClass('bf_hidden');
+        $('.bf_step').not(step.prev('.bf_step')).addClass('bf_hidden');
         step.prev('.bf_step').removeClass('bf_hidden');
     }
 
@@ -101,6 +100,7 @@ $(document).ready(function () {
     });
 
     $('.required-filed').on('input propertychange change paste keyup', function (e) {
+        e.preventDefault();
         let step = $(this).parents('.bf_step');
         let validation = false;
         let fields = step.find('.required-filed');
@@ -192,11 +192,7 @@ $(document).ready(function () {
         })
         if (validation) {
             step.find('.bf_next_btn').removeAttr('disabled');
-        } else {
-            step.find('.bf_next_btn').attr('disabled', '');
-        }
-        if (e.which === 13 || e.which === 1) {
-            if (validation) {
+            if (e.which === 13 || e.which === 1) {
                 if ($(this).hasClass('bf_phone_number')) {
                     if ($(this).val().length === 11) {
                         viewOffers();
@@ -206,6 +202,8 @@ $(document).ready(function () {
                 nextStep(step);
                 st();
             }
+        } else {
+            step.find('.bf_next_btn').attr('disabled', '');
         }
     });
 
@@ -232,7 +230,9 @@ $(document).ready(function () {
             var item = $("<div></div>", {
                 class: "bf_item", on: {
                     click: function () {
-                        var selectedOptionText = that.text();
+                        var selectedOptionText = that.text().trim();
+                        let selectName = $(this).parents('.bf_custom_select').find('select').attr('name');
+                        // selectedOptions(selectName, selectedOptionText);
                         selectedItem.text(selectedOptionText).removeClass("bf_arrowanim");
                         allItems.addClass("bf_all_items_hide");
                         let custom_select_select = $('.bf_selected_item');
@@ -320,8 +320,9 @@ $(document).ready(function () {
         close();
     });
 
-    $('.bf_view_offers').click(function (e) {
+    $(".bf_view_offers").click(function (e) {
         e.preventDefault();
+        console.log($('.bf_steps_form').serialize())
         viewOffers();
     });
 
@@ -329,10 +330,10 @@ $(document).ready(function () {
         counter = 0;
         customWidth = 0;
         bar.width('0%');
-        $('.bf_step_btn').removeClass('active');
-        $('.required-filed').val('');
-        $('.bf_next_btn').attr('disabled', '');
-        $('.bf_selected_item').text('Select');
+        // $('.bf_step_btn').removeClass('active');
+        // $('.required-filed').val('');
+        // $('.bf_next_btn').attr('disabled', '');
+        // $('.bf_selected_item').text('Select');
         let steps_inner = $('.bf_steps_inner');
         $('.bf_loading-overlay').addClass('active');
         $('.bf_hero_sec_inner').removeClass('bf_hidden');
@@ -386,7 +387,7 @@ $(document).ready(function () {
     function thankYou() {
         $('.bf_bar').animate({width: '100%'}, {
             duration: 10000, step: function (now, fx) {
-                if (fx.prop == 'width') {
+                if (fx.prop === 'width') {
                     $('.bf_counting').html(parseInt(Math.round(now * 100) / 100) + '%');
                 }
             }
@@ -395,5 +396,18 @@ $(document).ready(function () {
             close();
         }, 11000);
     }
+
+    // function selectedOptions(name, val) {
+    //     let options = $('select[name=' + name + ']').find('option');
+    //     options.each(function (i, ele) {
+    //         if ($(ele).text().trim() === val) {
+    //             $(ele).prop('selected', true);
+    //             $(ele).attr('selected', 'selected');
+    //         } else {
+    //             $(ele).prop('selected', false);
+    //             $(ele).removeAttr('selected');
+    //         }
+    //     });
+    // }
 
 })
