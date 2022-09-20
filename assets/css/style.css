@@ -1165,6 +1165,7 @@ input[type=email]::placeholder {
         min-width: 100%;
         font-size: 1.6rem;
         height: 6rem;
+        line-height: 4.7rem;
     }
 
     .bf_form_control {
