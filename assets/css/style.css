@@ -1163,9 +1163,46 @@ input[type=email]::placeholder {
 @media (max-width: 400px) {
     .bf_step_btn {
         min-width: 100%;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         height: 6rem;
         line-height: 4.7rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .bf_prev_btn svg {
+        width: 1.5rem;
+    }
+
+    .bf_step {
+        padding: 2.8rem 1.8rem;
+    }
+
+    .bf_steps_inner .bf_container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .bf_hero_sec .bf_sub_heading {
+        font-size: 1.7rem;
+    }
+
+    .bf_item {
+        font-size: 1.3rem;
+    }
+
+    .bf_prev_btn {
+        font-size: 1.5rem;
+    }
+
+    .bf_selected_item:after {
+        font-size: .9rem;
+        height: 1.5rem;
+        line-height: 1.3rem;
+        width: 1.5rem;
     }
 
     .bf_form_control {

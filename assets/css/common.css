@@ -595,7 +595,12 @@ footer hr {
 
 @media (max-width: 400px) {
     .bf_main_heading {
-        font-size: 2.4rem;
+        font-size: 2rem;
+    }
+
+    .bf_container {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
