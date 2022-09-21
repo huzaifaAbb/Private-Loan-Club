@@ -300,7 +300,7 @@ $(document).ready(function () {
         }, 600);
     });
 
-    $('.bf_next_btn').click(function (e) {
+    $('.bf_next_btn:not(.bf_view_offers)').click(function (e) {
         e.preventDefault();
         increaseBarWidth();
         st();
@@ -321,8 +321,12 @@ $(document).ready(function () {
     });
 
     $(".bf_view_offers").click(function (e) {
-        e.preventDefault();
-        console.log($('.bf_steps_form').serialize())
+        // e.preventDefault();
+        // console.log($('.bf_steps_form').serialize())
+        increaseBarWidth();
+        st();
+        var step = $(this).parents('.bf_step');
+        nextStep(step);
         viewOffers();
     });
 
