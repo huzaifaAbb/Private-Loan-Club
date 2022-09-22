@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="assets/css/fonts.css"/>
+    <link rel="stylesheet" href="assets/css/common.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+<body>
+
+<!---- Loading Overlay ---->
+<div class="bf_loading-overlay active">
+    <span class="fas fa-spinner fa-3x fa-spin"></span>
+</div>
+<!---- Loading Overlay ---->
+
+<!---- Hero Section ---->
+<section class="bf_hero_sec">
+    <div class="bf_hero_steps">
+        <div class="bf_steps_inner active">
+            <div class="bf_progress_bar bf_container">
+                <div class="bf_progress">
+                    <div class="bf_bar"></div>
+                </div>
+            </div>
+            <div class="bf_steps_container bf_container">
+                <div class="bf_step bf_step_thank_you">
+                    <div class="bf_step_inner">
+                        <div class="bf_full_width">
+                            <h3 class="bf_main_heading">Your form is being processed</h3>
+                        </div>
+                        <p class="bf_main_para"><strong>This may take a few minutes.</strong></p>
+                        <p class="bf_main_para"><strong class="bf_counting">0</strong></p>
+                        <p class="bf_main_para">Please do not press the back button or refresh this page as it could
+                            delay or withdraw your form.</p>
+                        <p class="bf_main_para bf_main_para_small">
+                            We appreciate the opportunity to serve you today and may send you an email in the event you
+                            would like to utilize our marketplace again in the futu
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---- Hero Section ---->
+
+
+<script src=" assets/js/jquery.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+    $(document).ready(function () {
+        function thankYou() {
+            $('.bf_bar').animate({width: '100%'}, {
+                duration: 10000, step: function (now, fx) {
+                    if (fx.prop === 'width') {
+                        $('.bf_counting').html(parseInt(Math.round(now * 100) / 100) + '%');
+                    }
+                }
+            })
+            setTimeout(function () {
+                close();
+            }, 11000);
+        }
+
+        thankYou();
+    })
+</script>
+</body>
+
+</html>
