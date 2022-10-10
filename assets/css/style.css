@@ -340,6 +340,7 @@ input[type=email]::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
 }
 
 .bf_step_inner .bf_main_para.bf_main_para_small.bf_para_green svg {
